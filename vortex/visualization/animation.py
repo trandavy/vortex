@@ -71,8 +71,8 @@ def render_animation(results: dict, track, save_path: str = 'optimal_race.gif'):
     
     # Telemetry overlay
     telemetry_box = dict(boxstyle='round,pad=0.5', facecolor='#2a2a2a', edgecolor='#444444', alpha=0.9)
-    telemetry_text = ax.text(0.03, 0.95, '', transform=ax.transAxes, color='white', 
-                             fontsize=14, fontfamily='monospace', verticalalignment='top', bbox=telemetry_box)
+    telemetry_text = ax.text(0.03, 0.05, '', transform=ax.transAxes, color='white', 
+                             fontsize=14, fontfamily='monospace', verticalalignment='bottom', bbox=telemetry_box)
     
     def init():
         prototype.set_data([], [])
@@ -90,6 +90,10 @@ def render_animation(results: dict, track, save_path: str = 'optimal_race.gif'):
         throttle = results['u'][frame]
         brakes = results['beta'][frame]
         
+        # Topography data
+        elevation = track.z[frame]
+        slope_pct = track.dz_ds[frame] * 100.0 # Grade percentage
+        
         status = "COAST"
         prototype.set_markerfacecolor('cyan')
         prototype.set_markersize(14)
@@ -103,9 +107,13 @@ def render_animation(results: dict, track, save_path: str = 'optimal_race.gif'):
             prototype.set_markerfacecolor('#FF3333')
             prototype.set_markersize(24)
             
+        slope_indicator = "▼" if slope_pct < -0.5 else ("▲" if slope_pct > 0.5 else "-")
+            
         telemetry_text.set_text(
-            f"TIME   : {t_current:.1f} s\n"
+            f"TIME   : {t_current:5.1f} s\n"
             f"SPEED  : {speed_current:>4.1f} km/h\n"
+            f"ELEV   : {elevation:>4.1f} m\n"
+            f"GRADE  : {slope_pct:>4.1f}% {slope_indicator}\n"
             f"ACTION : {status}"
         )
         return prototype, telemetry_text
