@@ -1,4 +1,4 @@
-# VORTEX: Vehicle Optimal Control Platform
+# VORTEX: Vehicle Optimization & Routing Trajectory EXplorer
 
 ![UTeCia Logo](ressources/logo.jpg)
 
