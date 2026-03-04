@@ -1,6 +1,6 @@
 # VORTEX: Vehicle Optimal Control Platform
 
-![UTeCia Logo](https://teamutecia.wordpress.com/wp-content/uploads/2016/09/cropped-logo-noir.png)
+![UTeCia Logo](ressources/logo.jpg)
 
 **A Research-Grade Trajectory Optimization Engine for the Shell Eco-marathon.**
 
@@ -29,12 +29,12 @@ By discarding brute-force estimation and solving the environment as a pure mathe
 ### Circuit Execution (NOGARO Track)
 The following simulation translates the mathematical output back onto the 2D topographical map of the circuit, highlighting the exact sections where the driver should accelerate (burn) and coast.
 
-![Circuit Animation](results/optimal_race.gif)
+![Circuit Animation](ressources/optimal_race.gif)
 
 ### Strategy Telemetry (Multi-Axis Profile)
 Here is the continuous velocity profile over the distance `s` calculated by the optimizer, directly corresponding to when fuel is injected (throttle command `u`).
 
-![Optimal Control Trajectory Strategy](results/optimal_trajectory.png)
+![Optimal Control Trajectory Strategy](ressources/optimal_trajectory.png)
 
 ### 📊 Projected Performances & Model Realism
 Using the advanced CasADi solver—which processes non-linear tire scrub matrices, rotational mass inertia, and parabolic Engine BSFC (Brake Specific Fuel Consumption) efficiency maps—the minimal work penalty required to complete the 1,603-meter NOGARO lap calculates exactly to **7,126.62 Units**.
