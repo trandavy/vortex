@@ -1,0 +1,25 @@
+# configs/vehicle_v1.yaml
+vehicle:
+  mass:
+    prototype_kg: 37.0
+    pilot_kg: 50.0
+    rotational_inertia_factor: 1.05 # Add 5% equivalent mass for rotating parts (wheels, drivetrain)
+  aerodynamics:
+    frontal_area_m2: 0.3243538
+    drag_coefficient_cx: 0.2
+  tires:
+    rolling_resistance_crr: 1.2
+    cornering_stiffness_N_rad: 25000.0 # Approximate cornering stiffness for scrub calculation
+  engine:
+    base_efficiency: 0.28 # Base thermal efficiency
+    optimal_throttle: 0.8 # Efficiency peaks at 80% throttle
+
+environment:
+  gravity_mps2: 9.81
+  air_temperature_degc: 20.0
+  air_density_kgpm3: 1.203854
+
+optimization:
+  target_average_speed_kph: 25.0
+  min_start_speed_kph: 15.0
+  max_start_speed_kph: 50.0
