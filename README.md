@@ -2,7 +2,7 @@
 
 ![UTeCia Logo](ressources/logo.jpg)
 
-**A Research-Grade Trajectory Optimization Engine for the Shell Eco-marathon.**
+**A Trajectory Optimization Engine for the Shell Eco-marathon.**
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
@@ -37,7 +37,7 @@ Here is the continuous velocity profile over the distance `s` calculated by the 
 ![Optimal Control Trajectory Strategy](ressources/optimal_trajectory.png)
 
 ### 📊 Projected Performances & Model Realism
-Using the advanced CasADi solver—which processes non-linear tire scrub matrices, rotational mass inertia, and parabolic Engine BSFC (Brake Specific Fuel Consumption) efficiency maps—the minimal work penalty required to complete the 1,603-meter NOGARO lap calculates exactly to **7,126.62 Units**.
+Using the advanced CasADi solver which processes non-linear tire scrub matrices, rotational mass inertia, and parabolic Engine BSFC (Brake Specific Fuel Consumption) efficiency maps the minimal work penalty required to complete the 1,603-meter NOGARO lap calculates exactly to **7,126.62 Units**.
 
 From this mathematical absolute, we derive the real-world strategy range:
 * **Cost Metric:** 4.44 Joule-Equivalents / meter (incorporating transient mechanical wastes).
@@ -97,7 +97,7 @@ graph TD
 
 ## 🚀 Quick Start Guide
 
-You can reproduce the 3,000+ km/L theoretical run using our pre-configured environments on your own machine. 
+You can reproduce the 2,000+ km/L theoretical run using our pre-configured environments on your own machine. 
 
 ```bash
 # 1. Clone the platform
