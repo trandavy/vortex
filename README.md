@@ -1,12 +1,12 @@
-<div align="center">
-  <img src="https://teamutecia.wordpress.com/wp-content/uploads/2016/09/cropped-logo-noir.png" alt="UTeCia Logo" width="200"/>
-  <h1>VORTEX: Vehicle Optimal Control Platform</h1>
-  <p><strong>A Research-Grade Trajectory Optimization Engine for the Shell Eco-marathon.</strong></p>
-  
-  [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-  [![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
-  [![License MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-</div>
+# VORTEX: Vehicle Optimal Control Platform
+
+![UTeCia Logo](https://teamutecia.wordpress.com/wp-content/uploads/2016/09/cropped-logo-noir.png)
+
+**A Research-Grade Trajectory Optimization Engine for the Shell Eco-marathon.**
+
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
+[![License MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 <hr>
 
@@ -29,16 +29,12 @@ By discarding brute-force estimation and solving the environment as a pure mathe
 ### Circuit Execution (NOGARO Track)
 The following simulation translates the mathematical output back onto the 2D topographical map of the circuit, highlighting the exact sections where the driver should accelerate (burn) and coast.
 
-<div align="center">
-  <img src="results/optimal_race.gif" alt="Circuit Animation" width="800"/>
-</div>
+![Circuit Animation](results/optimal_race.gif)
 
 ### Strategy Telemetry (Multi-Axis Profile)
 Here is the continuous velocity profile over the distance `s` calculated by the optimizer, directly corresponding to when fuel is injected (throttle command `u`).
 
-<div align="center">
-  <img src="results/optimal_trajectory.png" alt="Optimal Control Trajectory Strategy" width="800"/>
-</div>
+![Optimal Control Trajectory Strategy](results/optimal_trajectory.png)
 
 ### 📊 Projected Performances & Model Realism
 Using the advanced CasADi solver—which processes non-linear tire scrub matrices, rotational mass inertia, and parabolic Engine BSFC (Brake Specific Fuel Consumption) efficiency maps—the minimal work penalty required to complete the 1,603-meter NOGARO lap calculates exactly to **7,126.62 Units**.
