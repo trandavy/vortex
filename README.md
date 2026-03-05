@@ -29,9 +29,11 @@ By discarding brute-force estimation and solving the environment as a pure mathe
 ### Circuit Execution (NOGARO Track)
 The following simulation translates the mathematical output back onto the topographical map of the circuit, highlighting the exact sections where the driver should accelerate (burn) and coast. The 3D view vertically exaggerates track changes to highlight the physics-based logic dictating the strategy.
 
-| 2D Overhead Telemetry | 3D Topographical Strategy |
-| :---: | :---: |
-| ![2D Circuit](ressources/optimal_race_2d.gif) | ![3D Circuit](ressources/optimal_race_3d.gif) |
+**2D Overhead Telemetry**
+![2D Circuit](ressources/optimal_race_2d.gif)
+
+**3D Topographical Strategy**
+![3D Circuit](ressources/optimal_race_3d.gif)
 
 ### Strategy Telemetry (Multi-Axis Profile)
 Here is the continuous velocity profile over the distance `s` calculated by the optimizer, directly corresponding to when fuel is injected (throttle command `u`).
