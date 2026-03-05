@@ -8,7 +8,7 @@ from vortex.core.track import Track
 from vortex.utils.config import load_config
 from vortex.optimization.solver import OptimalControlSolver
 from vortex.visualization.plotting import plot_trajectory
-from vortex.visualization.animation import render_animation
+from vortex.visualization.animation import render_2d_animation, render_3d_animation
 
 def main():
     print("Welcome to VORTEX Optimal Control Engine\n")
@@ -39,9 +39,13 @@ def main():
     print("\n[VISUALIZATION] Rendering Strategy...")
     plot_trajectory(results, track, save_path=plot_path)
     
-    ani_path = os.path.join(results_dir, 'optimal_race.gif')
-    print("\n[VISUALIZATION] Rendering Circuit Animation (GIF)...")
-    render_animation(results, track, save_path=ani_path)
+    ani_2d_path = os.path.join(results_dir, 'optimal_race_2d.gif')
+    print("\n[VISUALIZATION] Rendering 2D Circuit Animation (GIF)...")
+    render_2d_animation(results, track, save_path=ani_2d_path)
+    
+    ani_3d_path = os.path.join(results_dir, 'optimal_race_3d.gif')
+    print("\n[VISUALIZATION] Rendering 3D Isometric Circuit Animation (GIF)...")
+    render_3d_animation(results, track, save_path=ani_3d_path)
     
     print("\nExperiment Workflow Completed Successfully.")
 

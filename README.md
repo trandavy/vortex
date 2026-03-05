@@ -27,9 +27,11 @@ This repository transforms UTeCia's historical heuristic grid-search strategies 
 By discarding brute-force estimation and solving the environment as a pure mathematical Non-linear Program, the engine converges on a globally optimal "Burn-and-Coast" race strategy.
 
 ### Circuit Execution (NOGARO Track)
-The following simulation translates the mathematical output back onto the 2D topographical map of the circuit, highlighting the exact sections where the driver should accelerate (burn) and coast.
+The following simulation translates the mathematical output back onto the topographical map of the circuit, highlighting the exact sections where the driver should accelerate (burn) and coast. The 3D view vertically exaggerates track changes to highlight the physics-based logic dictating the strategy.
 
-![Circuit Animation](ressources/optimal_race.gif)
+| 2D Overhead Telemetry | 3D Topographical Strategy |
+| :---: | :---: |
+| ![2D Circuit](ressources/optimal_race_2d.gif) | ![3D Circuit](ressources/optimal_race_3d.gif) |
 
 ### Strategy Telemetry (Multi-Axis Profile)
 Here is the continuous velocity profile over the distance `s` calculated by the optimizer, directly corresponding to when fuel is injected (throttle command `u`).
